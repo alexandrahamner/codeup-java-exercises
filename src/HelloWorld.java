@@ -39,5 +39,35 @@ public class HelloWorld {
 //        int three = (int) "three";
 //        The above gives the error incompatible types.
 
+//        Rewrite the following code:
+//        int x = 4;
+//        x = x + 5;
+
+        int y = 4;
+        y += 5;
+        System.out.println(y);
+
+//        int x = 3;
+//        int y = 4;
+//        y = y * x;
+
+        int a = 3;
+        int b = 4;
+        a *= b;
+        System.out.println(a);
+
+//       int x = 10;
+//       int y = 2;
+//       x = x / y;
+//       y = y - x;
+
+        int c = 10;
+        int d = 2;
+        c /= d;
+        d -= c;
+        System.out.println(c);
+        System.out.println(d);
+
+
     }
 }
