@@ -16,5 +16,28 @@ public class HelloWorld {
 //        change the declaration to float and adding an F to the end of the value helps to solve the 3.14 issue
         myNumber = 3.14F;
         System.out.println(myNumber);
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
+//        What is the difference between the above code blocks? Explain why the code outputs what it does.
+/*
+          The above code blocks differ because the placement of the "++"; placing it in front of the variable will change it's value,
+          while placing it after makes a copy with the incrementation but does not change the initial value. (Similar to JS)
+
+*/
+//        String class = "Bio";
+//        The above gives me an error because class is a reserved word.
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        The above doesn't work because, "class java.lang.String cannot be cast to class java.lang.Integer"
+
+//        int three = (int) "three";
+//        The above gives the error incompatible types.
+
     }
 }
