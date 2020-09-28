@@ -68,6 +68,17 @@ public class HelloWorld {
         System.out.println(c);
         System.out.println(d);
 
+//        What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold?
+
+//        byte aSmallNumber = 200;
+//        gives me an error!
+
+//        What happens if you increment a numeric variable past the type's capacity?
+        byte aSmallNumber = 127;
+        ++aSmallNumber;
+        System.out.println(aSmallNumber);
+//        This printed out -128
+
 
     }
 }
