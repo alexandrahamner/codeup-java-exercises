@@ -5,6 +5,7 @@ public class ConsoleExercises {
         double pi = 3.14159;
         System.out.printf("The value of pi is approximately %.2f\n", pi);
         Scanner sc = new Scanner(System.in);
+        sc.useDelimiter(" ");
 //        System.out.println("What is your favorite number?");
 //        int userNumber = sc.nextInt();
 //        System.out.printf("Your number was %d.", userNumber);
@@ -26,15 +27,33 @@ public class ConsoleExercises {
 //
 //        sc.nextLine();
 
-        System.out.println("What is the length of the classroom?");
-        String length = sc.nextLine();
-        int convertedLength = Integer.parseInt(length);
-        System.out.println("What is the width of the classroom?");
-        String width = sc.nextLine();
-        int convertedWidth = Integer.parseInt(width);
-        int perimeter = (convertedWidth * 2) + (convertedLength * 2);
-        int area = (convertedWidth * convertedLength);
-        System.out.printf("The perimeter is: %d, and the area is: %d.", perimeter, area);
+//        System.out.println("What is the length of the classroom?");
+//        String length = sc.nextLine();
+//        int convertedLength = Integer.parseInt(length);
+//        System.out.println("What is the width of the classroom?");
+//        String width = sc.nextLine();
+//        int convertedWidth = Integer.parseInt(width);
+//        int perimeter = (convertedWidth * 2) + (convertedLength * 2);
+//        int area = (convertedWidth * convertedLength);
+//        System.out.printf("The perimeter is: %d, and the area is: %d.", perimeter, area);
+
+//        ~~~ Bonus ~~~
+
+        System.out.println("What is the length, width, and height of the classroom?");
+        float width = sc.nextFloat();
+        float length = sc.nextFloat();
+        float height = sc.nextFloat();
+
+        float area = width * length;
+        float perimeter = (width * 2) + (length * 2);
+        float volume = area * height;
+
+        System.out.printf("The area is: %f\nThe perimeter is: %f\nThe volume is: %f\n", area, perimeter, volume);
+
+
+
+
+
 
 
     }
