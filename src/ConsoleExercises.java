@@ -18,11 +18,25 @@ public class ConsoleExercises {
 //        If you enter more than three words, only the first 3 words are taken in.
 //        If you enter less than three words, it waits until you give a third word.
 
-//        You cannot have other sc.next(); before a sc.nextLine(); it doesn't give the user space to type in their response.
-        System.out.println("Give me your favorite quote.");
-        String quote = sc.nextLine();
-        System.out.printf("\"%s\" is a good quote!", quote);
+//        sc.nextLine();
+//
+//        System.out.println("Give me your favorite quote.");
+//        String quote = sc.nextLine();
+//        System.out.printf("\"%s\" is a good quote!", quote);
+//
+//        sc.nextLine();
+
+        System.out.println("What is the length of the classroom?");
+        String length = sc.nextLine();
+        int convertedLength = Integer.parseInt(length);
+        System.out.println("What is the width of the classroom?");
+        String width = sc.nextLine();
+        int convertedWidth = Integer.parseInt(width);
+        int perimeter = (convertedWidth * 2) + (convertedLength * 2);
+        int area = (convertedWidth * convertedLength);
+        System.out.printf("The perimeter is: %d, and the area is: %d.", perimeter, area);
 
 
     }
+
 }
