@@ -9,12 +9,15 @@ public class HelloWorld {
         String myString = "Howdy, World!";
         System.out.println(myString);
 //        Just declaring a variable and then trying to print it does not work because a value was not initialized.
-        float myNumber;
+//        float myNumber; (one solution)
+        long myNumber;
 //        Why does assigning the value 3.14 to a variable declared as a long not compile, but assigning an integer value does?
-//
+//        Doesn't compile because it needs to be stored in a data type that holds decimals. (Double or Float)
 //        myNumber = 3.14;
 //        change the declaration to float and adding an F to the end of the value helps to solve the 3.14 issue
-        myNumber = 3.14F;
+//        myNumber = 3.14F; (one solution)
+        myNumber = (long) 3.14;
+
         System.out.println(myNumber);
 //        int x = 5;
 //        System.out.println(x++);
