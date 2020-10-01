@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -69,6 +71,33 @@ public class ControlFlowExercises {
 
             }
         }
+
+//        Display a table of powers.
+/*
+    Prompt the user to enter an integer.
+    Display a table of squares and cubes from 1 to the value entered.
+    Ask if the user wants to continue.
+    Assume that the user will enter valid data.
+    Only continue if the user agrees to.
+*/
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do you want to enter a number? [y/n]");
+        String userAnswer = sc.next();
+
+        if(userAnswer.equals("y")) {
+            boolean leftJustifiedRows = false;
+            System.out.println("What number would you like to go up to?");
+            int userNumber = sc.nextInt();
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("------ | ------- | -----");
+            for(int i = 0; i <= userNumber; i++) {
+                System.out.println("  " + i + "    |    " + (i * i) + "    |   " + (i * i * i));
+            }
+        }
+
+
+
+
 
     }
 }
