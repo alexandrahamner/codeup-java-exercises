@@ -78,8 +78,8 @@ public class ControlFlowExercises {
     Only continue if the user agrees to.
 */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do you want to enter a number? [y/n]");
-        String userAnswer = sc.next();
+//        System.out.println("Do you want to enter a number? [y/n]");
+//        String userAnswer = sc.next();
 //
 //        if(userAnswer.equals("y")) {
 //            System.out.println("What number would you like to go up to?");
@@ -90,6 +90,29 @@ public class ControlFlowExercises {
 //                System.out.println("  " + i + "    |    " + (i * i) + "    |   " + (i * i * i));
 //            }
 //        }
+
+        boolean userResponse = true;
+
+        do{
+            System.out.println("What number would you like to go up to?");
+            int userNumber = sc.nextInt();
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("------ | ------- | -----");
+            for(int i = 1; i <= userNumber; i++) {
+                System.out.printf("%-6d", i);
+                System.out.print(" | ");
+                System.out.printf("%-7d", i * i);
+                System.out.print(" | ");
+                System.out.print(i * i * i);
+                System.out.println();
+            }
+            System.out.println("Do you want to enter a number? [y/n]");
+            String userAnswer = sc.next();
+            if(!userAnswer.equalsIgnoreCase("y")) {
+                userResponse = false;
+            }
+        } while (userResponse);
+
 
 /*
     Convert given number grades into letter grades.
@@ -108,22 +131,22 @@ public class ControlFlowExercises {
     F : 59 - 0
  */
 
-        if (userAnswer.equals("y")) {
-            System.out.println("Enter your grade for the semester.");
-            int userGrade = sc.nextInt();
-
-            if (userGrade <= 59) {
-                System.out.println("Your grade is a F. Forget about it.");
-            } else if ((userGrade >= 60) && (userGrade <= 66)) {
-                System.out.println("Your grade is a D. Do better.");
-            } else if ((userGrade >= 67) && (userGrade <= 79)) {
-                System.out.println("Your grade is a C. Come on, is that the best you can do?");
-            } else if ((userGrade >= 80) && (userGrade <= 87)) {
-                System.out.println("Your grade is a B. Best grade you've gotten so far.");
-            } else if ((userGrade >= 88) && (userGrade <= 100)) {
-                System.out.println("Your grade is an A. Awesome!");
-            }
-
-        }
+//        if (userAnswer.equals("y")) {
+//            System.out.println("Enter your grade for the semester.");
+//            int userGrade = sc.nextInt();
+//
+//            if (userGrade <= 59) {
+//                System.out.println("Your grade is a F. Forget about it.");
+//            } else if ((userGrade >= 60) && (userGrade <= 66)) {
+//                System.out.println("Your grade is a D. Do better.");
+//            } else if ((userGrade >= 67) && (userGrade <= 79)) {
+//                System.out.println("Your grade is a C. Come on, is that the best you can do?");
+//            } else if ((userGrade >= 80) && (userGrade <= 87)) {
+//                System.out.println("Your grade is a B. Best grade you've gotten so far.");
+//            } else if ((userGrade >= 88) && (userGrade <= 100)) {
+//                System.out.println("Your grade is an A. Awesome!");
+//            }
+//
+//        }
     }
 }
