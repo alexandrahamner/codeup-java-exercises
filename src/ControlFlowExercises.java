@@ -57,7 +57,7 @@ public class ControlFlowExercises {
  */
 
         for (int x = 1; x <= 100; x++) {
-            if (((x % 5) == 0) && ((x % 3) == 0)) {
+            if (x % 15 == 0) {
                 System.out.println("FizzBuzz");
             } else if (x % 5 == 0) {
                 System.out.println("Buzz");
@@ -82,7 +82,6 @@ public class ControlFlowExercises {
         String userAnswer = sc.next();
 //
 //        if(userAnswer.equals("y")) {
-//            boolean leftJustifiedRows = false;
 //            System.out.println("What number would you like to go up to?");
 //            int userNumber = sc.nextInt();
 //            System.out.println("Number | Squared | Cubed");
