@@ -42,5 +42,33 @@ public class ControlFlowExercises {
         for (long i = 2; i <= 1000000; i *= i) {
             System.out.print(i + "\n");
         }
+
+
+//  Fizzbuzz
+/*  One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+
+    Write a program that prints the numbers from 1 to 100.
+    For multiples of three: print “Fizz” instead of the number.
+    For the multiples of five: print “Buzz”.
+    For numbers which are multiples of both three and five: print “FizzBuzz”.
+
+ */
+
+        for (int x = 1; x <= 100; x++) {
+            if (((x % 5) == 0) && ((x % 3) == 0)) {
+                System.out.println("FizzBuzz");
+            }
+            else if (x % 5 == 0) {
+                System.out.println("Buzz");
+            }
+            else if (x % 3 == 0) {
+                System.out.println("Fizz");
+            }
+            else {
+                System.out.println(x);
+
+            }
+        }
+
     }
 }
