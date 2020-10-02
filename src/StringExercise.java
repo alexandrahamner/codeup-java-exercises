@@ -8,5 +8,9 @@ public class StringExercise {
 //Strings Basics 2.
         String secondStatement = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(secondStatement);
+
+//Strings Basics 3.
+        String thirdStatement = "In windows, the main drive is usually C:\\";
+        System.out.println(thirdStatement);
     }
 }
