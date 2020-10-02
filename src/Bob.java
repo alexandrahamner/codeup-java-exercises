@@ -8,7 +8,7 @@ public class Bob {
         System.out.println("Hey, I'm Bob. What's up? If you're done talking to me, just say \"Convo is over.\"");
 
         do {
-            String userResponse = sc.nextLine();
+            String userResponse = sc.nextLine().trim();
 
             if (userResponse.endsWith("?")) {
                 System.out.println("Sure.");
