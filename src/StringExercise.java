@@ -12,5 +12,9 @@ public class StringExercise {
 //Strings Basics 3.
         String thirdStatement = "In windows, the main drive is usually C:\\";
         System.out.println(thirdStatement);
+
+//Strings Basics 4.
+        String fourthStatement = "I can do backlashes \\, double backlashes \\\\, and the amazing triple backlash \\\\\\!";
+        System.out.println(fourthStatement);
     }
 }
