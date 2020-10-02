@@ -4,5 +4,9 @@ public class StringExercise {
         String firstStatement = "We don't need no education\n" +
                 "We don't need no thought control ";
         System.out.println(firstStatement);
+
+//Strings Basics 2.
+        String secondStatement = "Check \"this\" out!, \"s inside of \"s!";
+        System.out.println(secondStatement);
     }
 }
