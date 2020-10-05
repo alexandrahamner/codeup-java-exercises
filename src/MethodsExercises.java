@@ -12,7 +12,8 @@ public class MethodsExercises {
 //Create a method that validates that user input is in a certain range
 //        System.out.println( getInteger(1, 10) );
 
-            factorial();
+//            factorial();
+            diceGame();
     }
 
 //Basic Arithmetic
@@ -72,5 +73,25 @@ Your return is Infinity but it should be zero, because any number divided by zer
         }
         return result;
 
+    }
+
+//Create an application that simulates dice rolling.
+
+    public static void diceGame() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How many sides should these dice have?");
+        int userDiceNumber = sc.nextInt();
+
+        int range = (userDiceNumber - 1) + 1;
+        for (int i = 1; i <= 2; i++ ) {
+            int diceOutcome = (int)(Math.random() * range) + 1;
+            System.out.printf("Dice %d was %d.\n", i, diceOutcome);
+        }
+
+        System.out.println("Do you want to roll again? [y/n]");
+        String userAnswer = sc.next();
+        if(userAnswer.equalsIgnoreCase("y")) {
+            diceGame();
+        }
     }
 }
