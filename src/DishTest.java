@@ -1,4 +1,4 @@
-public class DishTest {
+public class DishTest extends DishTools {
     public static void main(String[] args) {
         Dish rajas = new Dish();
         rajas.costInCents = 400;
@@ -6,6 +6,10 @@ public class DishTest {
         rajas.wouldRecommend = true;
 
         rajas.printSummary();
+
+        shoutDishName(rajas);
+        analyzeDishCost(rajas);
+        flipRecommendation(rajas);
 
     }
 }
