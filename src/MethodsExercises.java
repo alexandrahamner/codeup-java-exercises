@@ -10,7 +10,9 @@ public class MethodsExercises {
         System.out.println( modulus(4, 5) );
 
 //Create a method that validates that user input is in a certain range
-        System.out.println( getInteger(1, 10) );
+//        System.out.println( getInteger(1, 10) );
+
+            factorial();
     }
 
 //Basic Arithmetic
@@ -49,9 +51,26 @@ Your return is Infinity but it should be zero, because any number divided by zer
             System.out.println("You did it wrong! Try again.");
             return getInteger(min, max);
         }
-        System.out.printf("Great choice, %d is a good number!\n", userInput);
+//        System.out.printf("Great choice, %d is a good number!\n", userInput);
         return userInput;
     }
 
+//Calculate the factorial of a number.
+    public static long factorial(){
+        long result = 1;
+        long userInput = getInteger(1, 10);
 
+        for(int i = 1; i <= userInput; i++){
+                result *= i;
+        }
+        System.out.println(result);
+        System.out.println("Do you want to continue [y/n]?");
+        Scanner sc = new Scanner(System.in);
+        String userAnswer = sc.nextLine();
+        if(userAnswer.equalsIgnoreCase("y")) {
+            factorial();
+        }
+        return result;
+
+    }
 }
