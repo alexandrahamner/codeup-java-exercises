@@ -1,13 +1,43 @@
 public class Dish {
-    public int costInCents;
-    public String nameOfDish;
-    public boolean wouldRecommend;
+    private int costInCents;
+    private String nameOfDish;
+    private boolean wouldRecommend;
+
+    public Dish(String name, int cost, boolean recommendation) {
+        this.nameOfDish = name;
+        this.costInCents = cost;
+        this.wouldRecommend = recommendation;
+    }
+
+    public int getCost() {
+        return this.costInCents;
+    }
+
+    public void setCost(int cost) {
+        this.costInCents = cost;
+    }
+
+    public String getNameOfDish() {
+        return this.nameOfDish;
+    }
+
+    public void setName(String name) {
+        this.nameOfDish = name;
+    }
+
+    public boolean getRecommendation(){
+        return this.wouldRecommend;
+    }
+
+    public void setRecommendation(boolean recommendation) {
+        this.wouldRecommend = recommendation;
+    }
 
     public void printSummary() {
         System.out.printf("Cost: %d cents \nName: %s \nRecommended: %b\n",
-                costInCents,
-                nameOfDish,
-                wouldRecommend);
+                this.costInCents,
+                this.nameOfDish,
+                this.wouldRecommend);
     }
 
 }
