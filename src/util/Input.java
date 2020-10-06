@@ -1,6 +1,5 @@
 package util;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Input {
@@ -52,6 +51,7 @@ public class Input {
     public double getDouble() {
         System.out.println("Give me any number with a decimal.");
         double userInput = sc.nextDouble();
+        sc.nextLine();
         return userInput;
     }
 
