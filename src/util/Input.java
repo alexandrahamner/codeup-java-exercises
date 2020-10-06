@@ -6,12 +6,12 @@ import java.util.Scanner;
 public class Input {
     private Scanner sc = new Scanner(System.in);
 
-    String getString(){
+    public String getString(){
         String userString = sc.nextLine();
         return userString;
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         System.out.println("Yes or no?");
         String userString = sc.nextLine();
         if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")) {
@@ -21,7 +21,7 @@ public class Input {
         }
     }
 
-     int getInt(int min, int max) {
+     public int getInt(int min, int max) {
         System.out.printf("Give me a number between %d and %d\n", min, max);
         int userInput = sc.nextInt();
 
@@ -33,13 +33,13 @@ public class Input {
         return userInput;
     }
 
-    int getInt() {
+    public int getInt() {
         System.out.print("Give me any number.");
         int userInput = sc.nextInt();
         return userInput;
     }
 
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         System.out.printf("Give me a number between %s and %s\n", min, max);
         double userInput = sc.nextDouble();
         if((userInput < min) || (userInput > max)) {
@@ -49,8 +49,8 @@ public class Input {
         return userInput;
     }
 
-    double getDouble() {
-        System.out.print("Give me any number with a decimal.");
+    public double getDouble() {
+        System.out.println("Give me any number with a decimal.");
         double userInput = sc.nextDouble();
         return userInput;
     }

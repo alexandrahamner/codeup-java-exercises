@@ -1,13 +1,12 @@
 package shapes;
 
-import java.util.Scanner;
+import util.Input;
 
 public class CircleApp {
 
     public static void getRadius() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("What is the radius of the circle? (Can include decimals)");
-        double userRadius = sc.nextDouble();
+        Input Circle = new Input();
+        double userRadius = Circle.getDouble();
         Circle circle1 = new Circle(userRadius);
         double userArea= circle1.getArea();
         double userCircumference = circle1.getCircumference();
