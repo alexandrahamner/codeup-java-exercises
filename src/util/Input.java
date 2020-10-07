@@ -11,7 +11,8 @@ public class Input {
     }
 
     public String getString(){
-        return this.sc.nextLine();
+        String userString = this.sc.nextLine();
+        return userString;
     }
 
     public boolean yesNo() {
