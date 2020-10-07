@@ -11,7 +11,13 @@ public class Input {
     }
 
     public String getString(){
-        return this.sc.nextLine();
+        return getString("Type out a sentence.");
+    }
+
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String userString = this.sc.nextLine();
+        return userString;
     }
 
     public boolean yesNo() {
