@@ -25,13 +25,13 @@ public class Person {
 //        System.out.println(person1.getName());
 //        person1.sayHello();
 
-//The first SOUT is true because the strings are equal, but the second SOUT is false because they are two different objects with different IDs.
+//The first SOUT is true because the strings are equal, but the second SOUT is false because they are two different objects with different object reference.
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
 
-//I initially thought it would be false, since it is two different objects. I am guessing you are just making an exact duplicate of person1 and assigning it to person2
+//I initially thought it would be false, since it is two different objects. I am guessing you are just making an exact duplicate of person1 and assigning it to person2, they are both point to the same reference location
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
 //        System.out.println(person1 == person2);

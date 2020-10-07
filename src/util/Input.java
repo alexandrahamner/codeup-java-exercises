@@ -3,16 +3,25 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc;
+
+//Has to be in a constructor method, Java rule. All functionality happens in the methods.
+    public Input() {
+        this.sc = new Scanner(System.in);
+    }
 
     public String getString(){
-        String userString = sc.nextLine();
-        return userString;
+        return this.sc.nextLine();
     }
 
     public boolean yesNo() {
-        System.out.println("Yes or no?");
-        String userString = sc.nextLine();
+        return yesNo("Yes or No?");
+    }
+
+    //Prompt Bonus
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String userString = this.sc.nextLine();
         if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")) {
             return true;
         } else {
@@ -28,19 +37,23 @@ public class Input {
             System.out.println("You did it wrong! Try again.");
             return getInt(min, max);
         }
-//        System.out.printf("Great choice, %d is a good number!\n", userInput);
         return userInput;
     }
 
     public int getInt() {
-        System.out.print("Give me any number.");
-        int userInput = sc.nextInt();
+        return getInt("Give me any number.");
+    }
+
+//Prompt Bonus
+    public int getInt(String prompt) {
+        System.out.print(prompt);
+        int userInput = this.sc.nextInt();
         return userInput;
     }
 
     public double getDouble(double min, double max) {
-        System.out.printf("Give me a number between %s and %s\n", min, max);
-        double userInput = sc.nextDouble();
+        System.out.printf("Give me a number between %f and %f\n", min, max);
+        double userInput = this.sc.nextDouble();
         if((userInput < min) || (userInput > max)) {
             System.out.println("You did it wrong! Try again.");
             return getDouble(min, max);
@@ -50,7 +63,7 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Give me any number with a decimal.");
-        double userInput = sc.nextDouble();
+        double userInput = this.sc.nextDouble();
         sc.nextLine();
         return userInput;
     }
