@@ -4,6 +4,7 @@ class Developer extends Employee {
         super(name, department);
     }
 
+
     public String work() {
         return "writing code";
     }
