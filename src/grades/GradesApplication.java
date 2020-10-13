@@ -1,13 +1,10 @@
 package grades;
 import java.util.HashMap;
-import java.util.Scanner;
+import util.Input;
 
 import static grades.Student.getGradeAverage;
 
 public class GradesApplication {
-
-    //Scanner
-    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         // Hash Map
@@ -67,21 +64,26 @@ public class GradesApplication {
         }
     }
 
+    //Method to get more information on a student
     public static void getStudentInfo(HashMap<String, Student> students) {
+        Input input = new Input();
         System.out.println();
-        System.out.println("Which Student would you like to see more information on?");
-        String userInput = sc.nextLine();
+        String userInput = input.getString("Which Student would you like to see more information on?");
 
-        if(students.containsKey(userInput)) {
+        if (students.containsKey(userInput)) {
             String studentName = students.get(userInput).getName();
             double studentAverageGrade = getGradeAverage(students.get(userInput).getGrades());
             System.out.println("Retrieving information...");
             System.out.printf("Name: %s - GitHub Username: %s\n", studentName, userInput);
-            System.out.printf("Current Average Grade: %.2f", studentAverageGrade);
+            System.out.printf("Current Average Grade: %.2f\n", studentAverageGrade);
+            boolean userConfirmation = input.yesNo("Would you like to search for another student?");
+            if (userConfirmation) {
+                getStudentInfo(students);
+            }
         } else {
             System.out.println("Sorry, no student found with the username " + userInput);
             getStudentInfo(students);
-        }
+            }
 
     }
 
