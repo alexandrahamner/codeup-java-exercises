@@ -12,7 +12,7 @@ public class ShapesTest {
         System.out.println("Area for My Shape 1: " + myShape2.getArea());
 
 //        System.out.println(myShape2.getLength());
-//        Doesn't work because we did not override the get methods.
+//        Doesn't work because we are holding on to a Measurable
 
 
 
