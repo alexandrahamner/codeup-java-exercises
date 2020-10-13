@@ -14,9 +14,7 @@ public class Student {
         addGrade(87);
         addGrade(90);
         addGrade(75);
-        System.out.println(getGradeAverage(grades));
-
-
+        System.out.println(luna.getGradeAverage());
     }
     // Constructor to create a student
     public Student(String name){
@@ -37,7 +35,7 @@ public class Student {
         grades.add(grade);
     }
     // returns the average of the students grades, correctly calculates the average/mean.
-    public static double getGradeAverage(ArrayList<Integer> grades) {
+    public double getGradeAverage() {
         Integer sum = 0;
         if(!grades.isEmpty()) {
             for(Integer grade : grades) {

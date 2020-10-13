@@ -2,7 +2,6 @@ package grades;
 import java.util.HashMap;
 import util.Input;
 
-import static grades.Student.getGradeAverage;
 
 public class GradesApplication {
 
@@ -21,25 +20,25 @@ public class GradesApplication {
         luna.addGrade(87);
         luna.addGrade(90);
         luna.addGrade(75);
-        System.out.println("Luna's Grades: " + getGradeAverage(luna.getGrades()));
+//        System.out.println("Luna's Grades: " + luna.getGradeAverage(luna.getGrades()));
 
         // Andrew
         andrew.addGrade(96);
         andrew.addGrade(92);
         andrew.addGrade(85);
-        System.out.println("Andrew's Grades: " + getGradeAverage(andrew.getGrades()));
+//        System.out.println("Andrew's Grades: " + andrew.getGradeAverage(andrew.getGrades()));
 
         //Emily
         emily.addGrade(82);
         emily.addGrade(87);
         emily.addGrade(85);
-        System.out.println("Emily's Grades: " + getGradeAverage(emily.getGrades()));
+//        System.out.println("Emily's Grades: " + emily.getGradeAverage(emily.getGrades()));
 
         //Liz
         liz.addGrade(72);
         liz.addGrade(84);
         liz.addGrade(90);
-        System.out.println("Liz's Grades: " + getGradeAverage(liz.getGrades()));
+//        System.out.println("Liz's Grades: " + liz.getGradeAverage(liz.getGrades()));
 
         //Add Students to HashMap
         students.put("lunatic-15", luna);
@@ -72,7 +71,7 @@ public class GradesApplication {
 
         if (students.containsKey(userInput)) {
             String studentName = students.get(userInput).getName();
-            double studentAverageGrade = getGradeAverage(students.get(userInput).getGrades());
+            double studentAverageGrade = students.get(userInput).getGradeAverage();
             System.out.println("Retrieving information...");
             System.out.printf("Name: %s - GitHub Username: %s\n", studentName, userInput);
             System.out.printf("Current Average Grade: %.2f\n", studentAverageGrade);
