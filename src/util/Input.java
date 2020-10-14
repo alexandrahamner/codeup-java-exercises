@@ -16,8 +16,7 @@ public class Input {
 
     public String getString(String prompt){
         System.out.println(prompt);
-        String userString = this.sc.nextLine();
-        return userString;
+        return this.sc.nextLine();
     }
 
     public boolean yesNo() {
