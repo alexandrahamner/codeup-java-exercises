@@ -1,6 +1,6 @@
 import util.Input;
-
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class GroceryListApplication {
 
@@ -14,17 +14,20 @@ public class GroceryListApplication {
         if(userInput) {
             displayCategories();
             String itemCategory = addGroceryCategory();
-            System.out.println(itemCategory);
+            int quantity = input.getInt("How many are you getting?");
+            String groceryItem = input.getString("Name of the item:");
+            groceryList.add(new GroceryItem(groceryItem, itemCategory, quantity));
+            for (GroceryItem item: groceryList) {
+                System.out.printf("%s - %s - %s\n", item.getNumberOfItems(), item.getGroceryItem(), item.getGroceryCategory());
+            }
         } else {
             System.out.println("Alright, see you again soon!");
         }
     }
 
-
-    public static void displayCategories(){
+    private static void displayCategories(){
         System.out.println("Pick a category for your grocery item:");
         System.out.println();
-        System.out.println("0 - View your Grocery List");
         System.out.println("1 - Dairy");
         System.out.println("2 - Meat");
         System.out.println("3 - Deli");
@@ -37,7 +40,7 @@ public class GroceryListApplication {
         System.out.println("10 - Other");
     }
 
-    public static String addGroceryCategory() {
+    private static String addGroceryCategory() {
         int userChoice = input.getInt("Enter your choice: ");
             switch (userChoice) {
                 case 1:
@@ -65,4 +68,5 @@ public class GroceryListApplication {
                     return addGroceryCategory();
             }
     }
+
 }
