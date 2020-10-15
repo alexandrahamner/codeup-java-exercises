@@ -52,8 +52,12 @@ public class Input {
 //Prompt Bonus
     public int getInt(String prompt) {
         System.out.print(prompt);
-        int userInput = this.sc.nextInt();
-        return userInput;
+        try {
+            return Integer.valueOf(getString(" "));
+        } catch (Exception e) {
+            System.out.println("Invalid input, try again.");
+            return getInt(prompt);
+        }
     }
 
     public double getDouble(double min, double max) {
@@ -66,11 +70,17 @@ public class Input {
         return userInput;
     }
 
-    public double getDouble() {
-        System.out.println("Give me any number with a decimal.");
-        double userInput = this.sc.nextDouble();
-        sc.nextLine();
-        return userInput;
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
+        try {
+            return Double.valueOf(getString(" "));
+        } catch (Exception e) {
+            System.out.println("Invalid input, try again.");
+            return getDouble(prompt);
+        }
     }
 
+    public double getDouble(){
+        return getDouble("Give me any number with a decimal.");
+    }
 }
