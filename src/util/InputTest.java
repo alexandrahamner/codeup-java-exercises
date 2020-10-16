@@ -11,7 +11,12 @@ public class InputTest {
 //        System.out.print(stringInput.getDouble(1.0,10.0) + "\n");
 //        System.out.print(stringInput.getDouble() + "\n");
 
-        System.out.println(stringInput.getInt("Give me a whole number."));
-        System.out.println(stringInput.getInt("Give me a number with a decimal."));
+//        System.out.println(stringInput.getInt("Give me a whole number."));
+//        System.out.println(stringInput.getDouble("Give me a number with a decimal."));
+
+        System.out.println(stringInput.getHexDecimal());
+        System.out.println(stringInput.getBinary());
+
+
     }
 }
